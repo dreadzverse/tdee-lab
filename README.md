@@ -1,38 +1,23 @@
-# sv
+# TDEE Lab
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+## Tech Stack
 
-## Creating a project
+| Category      | Technology      |
+| ------------- | --------------- |
+| Framework     | Svelte          |
+| Metaframework | SvelteKit       |
+| UI Framework  | Tailwind CSS    |
+| UI Components | Shadcn (Svelte) |
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Theme
 
-```sh
-# create a new project in the current directory
-npx sv create
+[Preview](https://coolors.co/2e5aac-1b2635-f6f8fa-e7ecef-1a1c1e-7dd3fc)
 
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+| Color Name     | Role         | Hex Code  |
+| -------------- | ------------ | --------- |
+| Biometric Blue | Primary      | `#2E5AAC` |
+| Deep Slate     | Primary Dark | `#1B2635` |
+| Mist           | Neutral 1    | `#F6F8FA` |
+| Neutral Cool   | Neutral 2    | `#E7ECEF` |
+| Rich Black     | Neutral 3    | `#1A1C1E` |
+| Oxygen Blue    | Accent       | `#7DD3FC` |

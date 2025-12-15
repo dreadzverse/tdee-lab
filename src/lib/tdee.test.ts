@@ -50,6 +50,6 @@ describe('Calculate TDEE', () => {
   it.each(cases)('$name', (c) => {
     const result = calculateTDEE(c.gender, c.age, c.weight, c.height, c.activity);
 
-    expect(Math.round(result)).toBe(c.expected);
+    expect(result).toBe(c.expected);
   });
 });

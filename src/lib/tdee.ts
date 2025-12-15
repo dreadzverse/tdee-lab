@@ -35,5 +35,5 @@ export function calculateTDEE(
 ): number {
   const bmr = 10 * weight + 6.25 * height - 5 * age + (gender === 'male' ? +5 : -161);
 
-  return bmr * activitiesScaleFactor[activityLevel];
+  return Math.round(bmr * activitiesScaleFactor[activityLevel]);
 }

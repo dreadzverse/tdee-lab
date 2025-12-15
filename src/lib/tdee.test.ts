@@ -8,7 +8,7 @@ import { calculateTDEE } from './tdee';
 
 type TestCase = {
   name: string;
-  gender: 'male' | 'female';
+  sex: 'male' | 'female';
   age: number;
   weight: number;
   height: number;
@@ -19,7 +19,7 @@ type TestCase = {
 const cases: TestCase[] = [
   {
     name: 'Male - Moderate',
-    gender: 'male',
+    sex: 'male',
     age: 30,
     weight: 75,
     height: 180,
@@ -28,7 +28,7 @@ const cases: TestCase[] = [
   },
   {
     name: 'Female - Sedentary',
-    gender: 'female',
+    sex: 'female',
     age: 25,
     weight: 60,
     height: 165,
@@ -37,7 +37,7 @@ const cases: TestCase[] = [
   },
   {
     name: 'Male - Athlete',
-    gender: 'male',
+    sex: 'male',
     age: 40,
     weight: 90,
     height: 185,
@@ -48,7 +48,7 @@ const cases: TestCase[] = [
 
 describe('Calculate TDEE', () => {
   it.each(cases)('$name', (c) => {
-    const result = calculateTDEE(c.gender, c.age, c.weight, c.height, c.activity);
+    const result = calculateTDEE(c.sex, c.age, c.weight, c.height, c.activity);
 
     expect(result).toBe(c.expected);
   });

@@ -3,7 +3,7 @@
   SPDX-License-Identifier: Elastic-2.0
 */
 
-type Gender = 'male' | 'female';
+type Sex = 'male' | 'female';
 
 type Activity = 'sedentary' | 'light' | 'moderate' | 'heavy' | 'athlete';
 
@@ -27,13 +27,13 @@ const activitiesScaleFactor: Record<Activity, number> = {
   the final TDEE value.
 */
 export function calculateTDEE(
-  gender: Gender,
+  sex: Sex,
   age: number,
   weight: number,
   height: number,
   activityLevel: Activity,
 ): number {
-  const bmr = 10 * weight + 6.25 * height - 5 * age + (gender === 'male' ? +5 : -161);
+  const bmr = 10 * weight + 6.25 * height - 5 * age + (sex === 'male' ? +5 : -161);
 
   return Math.round(bmr * activitiesScaleFactor[activityLevel]);
 }

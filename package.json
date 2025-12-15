@@ -63,7 +63,8 @@
     "vitest-browser-svelte": "^2.0.1"
   },
   "dependencies": {
-    "postgres": "^3.4.7"
+    "postgres": "^3.4.7",
+    "zod": "^4.2.0"
   },
   "lint-staged": {
     "*.{js,ts,svelte}": [

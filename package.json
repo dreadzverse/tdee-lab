@@ -63,6 +63,7 @@
     "vitest-browser-svelte": "^2.0.1"
   },
   "dependencies": {
+    "@icons-pack/svelte-simple-icons": "^6.5.0",
     "postgres": "^3.4.7",
     "zod": "^4.2.0"
   },

@@ -29,4 +29,17 @@
     </p>
   </div>
   <CalculatorForm {data} />
+  <section class="flex flex-col gap-2 leading-7">
+    <h2 class="text-2xl">How TDEE Is Calculated</h2>
+    <p>
+      Your <strong>Total Daily Energy Expenditure (TDEE)</strong> estimates the calories you burn
+      each day by combining your body’s resting energy, measured as
+      <strong>Basal Metabolic Rate (BMR)</strong>, with the energy spent on daily activities. BMR
+      accounts for the calories needed to maintain essential functions like breathing and
+      circulation, while your activity level, including exercise and everyday movement, adjusts that
+      number to reflect your true daily needs. Our TDEE calculator uses your sex, age, weight, and
+      height to estimate BMR and then applies an activity factor, giving a clear and realistic
+      estimate of the calories your body burns each day.
+    </p>
+  </section>
 </main>

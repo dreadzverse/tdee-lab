@@ -18,21 +18,30 @@ const MAX_HEIGHT = 250;
 export const tdeeSchema = z.object({
   sex: z.enum(SEXES, 'Sex is required').optional(),
   age: z
-    .number('Age is required')
+    .number()
     .int()
     .min(MIN_AGE, `Age must be at least ${MIN_AGE}`)
     .max(MAX_AGE, `Age must be at most ${MAX_AGE}`)
-    .optional(),
+    .optional()
+    .refine((v) => v !== undefined, {
+      message: 'Age is required',
+    }),
   weight: z
-    .number('Weight is required')
+    .number()
     .min(MIN_WEIGHT, `Weight must be at least ${MIN_WEIGHT}`)
     .max(MAX_WEIGHT, `Weight must be at most ${MAX_WEIGHT}`)
-    .optional(),
+    .optional()
+    .refine((v) => v !== undefined, {
+      message: 'Weight is required',
+    }),
   height: z
-    .number('Height is required')
+    .number()
     .min(MIN_HEIGHT, `Height must be at least ${MIN_HEIGHT}`)
     .max(MAX_HEIGHT, `Height must be at most ${MAX_HEIGHT}`)
-    .optional(),
+    .optional()
+    .refine((v) => v !== undefined, {
+      message: 'Height is required',
+    }),
   activityLevel: z.enum(ACTIVITY_LEVEL, 'Activity Level is required').optional(),
 });
 

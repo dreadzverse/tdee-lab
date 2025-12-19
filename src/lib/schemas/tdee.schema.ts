@@ -6,12 +6,34 @@
 import * as z from 'zod';
 import { SEXES, ACTIVITY_LEVEL } from '$lib/types';
 
+const MIN_AGE = 10;
+const MAX_AGE = 120;
+
+const MIN_WEIGHT = 30;
+const MAX_WEIGHT = 300;
+
+const MIN_HEIGHT = 100;
+const MAX_HEIGHT = 250;
+
 export const tdeeSchema = z.object({
-  sex: z.enum(SEXES).optional(),
-  age: z.number().int().min(10).max(120).optional(),
-  weight: z.number().min(30).max(300).optional(),
-  height: z.number().min(100).max(250).optional(),
-  activityLevel: z.enum(ACTIVITY_LEVEL).optional(),
+  sex: z.enum(SEXES, 'Sex is required').optional(),
+  age: z
+    .number('Age is required')
+    .int()
+    .min(MIN_AGE, `Age must be at least ${MIN_AGE}`)
+    .max(MAX_AGE, `Age must be at most ${MAX_AGE}`)
+    .optional(),
+  weight: z
+    .number('Weight is required')
+    .min(MIN_WEIGHT, `Weight must be at least ${MIN_WEIGHT}`)
+    .max(MAX_WEIGHT, `Weight must be at most ${MAX_WEIGHT}`)
+    .optional(),
+  height: z
+    .number('Height is required')
+    .min(MIN_HEIGHT, `Height must be at least ${MIN_HEIGHT}`)
+    .max(MAX_HEIGHT, `Height must be at most ${MAX_HEIGHT}`)
+    .optional(),
+  activityLevel: z.enum(ACTIVITY_LEVEL, 'Activity Level is required').optional(),
 });
 
 export type TdeeSchema = z.infer<typeof tdeeSchema>;

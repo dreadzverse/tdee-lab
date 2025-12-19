@@ -14,6 +14,10 @@
 
 <svelte:head>
   <title>{APP_NAME}</title>
+  <meta
+    name="description"
+    content="Estimate your daily calorie needs with our TDEE calculator. Quickly calculate your Total Daily Energy Expenditure based on your sex, age, weight, height, and activity level."
+  />
 </svelte:head>
 
 <main class="flex justify-center">

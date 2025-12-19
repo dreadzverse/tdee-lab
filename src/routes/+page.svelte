@@ -20,6 +20,13 @@
   />
 </svelte:head>
 
-<main class="flex justify-center">
+<main class="flex flex-col gap-16 items-center mx-auto max-w-3xl">
+  <div class="flex flex-col gap-4 items-center">
+    <h1 class="text-3xl font-bold">TDEE Calculator</h1>
+    <p class="leading-8 text-center">
+      Calculate your <strong>Total Daily Energy Expenditure</strong> to find how many calories you need
+      per day based on your body and activity level.
+    </p>
+  </div>
   <CalculatorForm {data} />
 </main>

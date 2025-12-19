@@ -80,6 +80,8 @@
     measurementSystemsSelectItems.find((ms) => ms.value === measurementSystem)?.label ??
       'Select measurement system',
   );
+
+  const currentYear = new Date().getFullYear();
 </script>
 
 <svelte:head>
@@ -133,3 +135,7 @@
 </header>
 
 {@render children()}
+
+<footer class="flex justify-center items-center p-8 w-full">
+  <p>Copyright {currentYear} TDEE Lab</p>
+</footer>

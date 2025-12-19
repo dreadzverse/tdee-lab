@@ -34,13 +34,13 @@
   ];
 </script>
 
-<form method="POST" use:enhance>
+<form method="POST" use:enhance class="flex flex-col gap-2">
   <Form.Field form={sForm} name="sex">
     <Form.Control>
       {#snippet children({ props })}
         <Form.Label>Sex</Form.Label>
         <Select.Root type="single" bind:value={$form.sex} name={props.name}>
-          <Select.Trigger {...props}
+          <Select.Trigger class="w-full" {...props}
             >{sexes.find((s) => s.value === $form.sex)?.label ??
               'Select your biological sex'}</Select.Trigger
           >
@@ -86,7 +86,7 @@
       {#snippet children({ props })}
         <Form.Label>Activity Level</Form.Label>
         <Select.Root type="single" bind:value={$form.activityLevel} name={props.name}>
-          <Select.Trigger {...props}
+          <Select.Trigger class="w-full" {...props}
             >{activityLevels.find((a) => a.value === $form.activityLevel)?.label ??
               'Select your activity level'}</Select.Trigger
           >
@@ -100,6 +100,8 @@
     </Form.Control>
     <Form.FieldErrors />
   </Form.Field>
-  <Button type="button" variant="destructive" onclick={() => reset()}>Reset</Button>
-  <Form.Button>Calculate</Form.Button>
+  <div class="flex justify-between">
+    <Button type="button" variant="destructive" onclick={() => reset()}>Reset</Button>
+    <Form.Button>Calculate</Form.Button>
+  </div>
 </form>

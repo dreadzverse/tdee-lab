@@ -89,7 +89,7 @@
 <ModeWatcher />
 
 <header class="flex justify-between items-center p-8 w-full">
-  <a href="/" class="text-2xl/7"> TDEE Lab </a>
+  <a href="/" class="text-2xl font-bold"> TDEE Lab </a>
   <div class="flex gap-4 items-center">
     <Button
       href="https://github.com/dreadzverse/tdee-lab"
